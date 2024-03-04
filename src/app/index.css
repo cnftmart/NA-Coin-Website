@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  textarea,
+  input,
+  select,
+  option {
+    outline: none;
+  }
+
+  @font-face {
+    font-family: "Roboto, sans-serif";
+    src: url("/fonts/rob.ttf");
+  }
+
+  body {
+    background-color: #f0f9f8;
+    color: #2A2B2A;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    @apply font-rob;
+  }
+
+  @media (min-width: 768px) {
+    code::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+  code::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #daeceb;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: var(#229422);
+    border: 1px solid;
+    border-radius: 9px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #bd8b21;
+  }
+}
+
+.mobil {
+  @apply md:hidden lg:hidden xl:hidden 2xl:hidden;
+}
+.pc {
+  @apply hidden md:flex lg:flex xl:flex 2xl:flex;
+}
